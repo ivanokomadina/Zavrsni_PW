@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<br>
+<h2> Teams </h2>
+<br>
+{% for team in team_list %}
+    <div class="team">
+        <h4>{{ team.name }}</h4>
+        League: {{ team.league }} <br>
+        Founded: {{ team.founded_year }} <br>
+        -----
+    </div>
+{% endfor %}
+{% endblock %}

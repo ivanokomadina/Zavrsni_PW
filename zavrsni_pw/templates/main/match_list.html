@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<br>
+<h2> Matches </h2>
+<br>
+{% for match in match_list %}
+    <div class="match">
+        <h4>{{ match.home_team }} vs. {{ match.away_team }}</h4>
+        Final result: {{ match.home_score }} - {{ match.away_score }} <br>
+        League: {{ match.league }} <br>
+        Date: {{ match.date }} <br>
+        -----
+    </div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <h1>SportScore</h1>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/main">Home</a></li>
+            <li><a href="/main/sports">Sports</a></li>
+            <li><a href="/main/leagues">Leagues</a></li>
+            <li><a href="/main/teams">Teams</a></li>
+            <li><a href="/main/matches">Matches</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
