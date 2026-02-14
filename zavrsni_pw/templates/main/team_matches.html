@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<br>
+<h2>Utakmice tima: {{ team.name }}</h2>
+<br>
+
+{% if matches %}
+    <ul>
+        {% for match in matches %}
+            <li>
+                {{ match.date|date:"d.m.Y H:i" }} <br>
+                {{ match.home_team.name }} 
+                {{ match.home_score }} :
+                {{ match.away_score }} 
+                {{ match.away_team.name }}
+                <br><br>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Ovaj tim nema utakmica.</p>
+{% endif %}
+
+<a href="{% url 'main:teams' %}">← Povratak na timove</a>
+
+{% endblock %}

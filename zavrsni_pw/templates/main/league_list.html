@@ -5,7 +5,10 @@
 <br>
 {% for league in league_list %}
     <div class="league">
-        <h4>{{ league.name }} league</h4>
+        <h4><a href="{% url 'main:league-teams' league.pk %}">
+                {{ league.name }} league
+            </a>
+        </h4>
         Country: {{ league.country }} <br>
         Sport: {{ league.sport }} <br>
         -----

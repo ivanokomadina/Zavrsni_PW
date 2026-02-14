@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h2>Timovi u ligi: {{ league.name }}</h2>
+
+    {% if teams %}
+        <ul>
+            {% for team in teams %}
+                <li>{{ team.name }} (osnovan {{ team.founded_year }})</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Ova liga trenutno nema timova.</p>
+    {% endif %}
+
+    <a href="{% url 'main:leagues' %}">← Povratak na lige</a>
+{% endblock %}
