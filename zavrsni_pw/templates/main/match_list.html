@@ -1,15 +1,50 @@
 {% extends "base_generic.html" %}
 {% block content %}
+
+<h2>Matches</h2>
+
+<form method="get">
+    <input type="text" name="search" placeholder="Search by team name...">
+    <button type="submit">Search</button>
+</form>
+
 <br>
-<h2> Matches </h2>
-<br>
+
+{% if user.is_authenticated %}
+    <a href="{% url 'main:match-add' %}">
+        <button>Add Match</button>
+    </a>
+{% endif %}
+
+<hr>
+
 {% for match in match_list %}
     <div class="match">
-        <h4>{{ match.home_team }} vs. {{ match.away_team }}</h4>
-        Final result: {{ match.home_score }} - {{ match.away_score }} <br>
+        <strong>
+            {{ match.home_team }} {{ match.home_score }}
+            :
+            {{ match.away_score }} {{ match.away_team }}
+        </strong>
+        <br>
         League: {{ match.league }} <br>
         Date: {{ match.date }} <br>
-        -----
+
+        <br>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'main:match-update' match.pk %}">
+                <button>Update</button>
+            </a>
+
+            <a href="{% url 'main:match-delete' match.pk %}">
+                <button>Delete</button>
+            </a>
+        {% endif %}
+
+        <hr>
     </div>
+{% empty %}
+    <p>No matches found.</p>
 {% endfor %}
+
 {% endblock %}

@@ -2,10 +2,18 @@
 {% block content %}
 <br>
 <h2> Leagues </h2>
+
+<form method="get">
+    <input type="text" name="search" placeholder="Search leagues by name...">
+    <button type="submit">Search</button>
+</form>
+
 <br>
+
 {% for league in league_list %}
     <div class="league">
-        <h4><a href="{% url 'main:league-teams' league.pk %}">
+        <h4>
+            <a href="{% url 'main:league-teams' league.pk %}">
                 {{ league.name }} league
             </a>
         </h4>
@@ -13,5 +21,7 @@
         Sport: {{ league.sport }} <br>
         -----
     </div>
+{% empty %}
+    <p>No leagues found.</p>
 {% endfor %}
 {% endblock %}

@@ -1,17 +1,51 @@
 {% extends "base_generic.html" %}
 {% block content %}
+
+<h2>Teams</h2>
+
+<form method="get">
+    <input type="text" name="search" placeholder="Search teams by name...">
+    <button type="submit">Search</button>
+</form>
+
 <br>
-<h2> Teams </h2>
-<br>
+
+{% if user.is_authenticated %}
+    <a href="{% url 'main:team-add' %}">
+        <button>Add Team</button>
+    </a>
+{% endif %}
+
+<hr>
+
 {% for team in team_list %}
     <div class="team">
-        <h4><a href="{% url 'main:team-matches' team.pk %}">
+
+        <h4>
+            <a href="{% url 'main:team-matches' team.pk %}">
                 {{ team.name }}
             </a>
         </h4>
+
         League: {{ team.league }} <br>
         Founded: {{ team.founded_year }} <br>
-        -----
+
+        <br>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'main:team-update' team.pk %}">
+                <button>Update</button>
+            </a>
+
+            <a href="{% url 'main:team-delete' team.pk %}">
+                <button>Delete</button>
+            </a>
+        {% endif %}
+
+        <hr>
     </div>
+{% empty %}
+    <p>No teams found.</p>
 {% endfor %}
+
 {% endblock %}

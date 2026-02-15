@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'main.apps.MainConfig'
 ]
 
+LOGIN_REDIRECT_URL = 'main:home'
+LOGOUT_REDIRECT_URL = 'main:home'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
