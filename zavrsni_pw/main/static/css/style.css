@@ -1,0 +1,222 @@
+/* ---------- Global ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #1f3c88;
+}
+
+h2, h3, h4 {
+    color: #1f3c88;
+}
+
+a {
+    color: #1f3c88;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Auth info ---------- */
+.auth-bar {
+    padding: 10px 30px;       
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    text-align: right;         
+    font-size: 0.9em;
+}
+
+.auth-bar a, 
+.auth-bar form button {
+    color: #1f3c88;
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 5px;
+    text-decoration: none;
+}
+
+.auth-bar form button:hover,
+.auth-bar a:hover {
+    text-decoration: underline;
+}
+
+form button,
+button {
+    background-color: #1f3c88;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #162d66;
+}
+
+/* ---------- Layout ---------- */
+#sidebar {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;      
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+}
+
+#sidebar ul li {
+    margin: 0;
+}
+
+#sidebar ul li a {
+    font-weight: bold;
+}
+
+/* ---------- Content ---------- */
+.content {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 1000px;
+}
+
+.welcome-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ---------- Cards ---------- */
+.league,
+.team,
+.match,
+.sport {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.league:hover,
+.team:hover,
+.match:hover,
+.sport:hover {
+    background-color: #f0f4ff;
+}
+
+/* ---------- Lists ---------- */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* ---------- Forms ---------- */
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form select {
+    padding: 6px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+/* ---------- Login / Register Forms ---------- */
+.form-container {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+form.login-form,
+form.register-form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form.login-form h2,
+form.register-form h2 {
+    text-align: center;
+    color: #1f3c88;
+    margin-bottom: 20px;
+}
+
+form.login-form input[type="text"],
+form.login-form input[type="password"],
+form.register-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form.login-form input[type="submit"],
+form.register-form button {
+    background-color: #1f3c88;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form.login-form input[type="submit"]:hover,
+form.register-form button:hover {
+    background-color: #162d66;
+}
+
+/* ---------- Links at bottom ---------- */
+a[href*="Back"],
+a[href*="Povratak"] {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        float: none;
+        min-height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    #sidebar ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

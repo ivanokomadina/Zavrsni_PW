@@ -2,7 +2,7 @@
 
 {% block content %}
 <br>
-<h2>Utakmice tima: {{ team.name }}</h2>
+<h2>Team matches: {{ team.name }}</h2>
 <br>
 
 {% if matches %}
@@ -19,9 +19,9 @@
         {% endfor %}
     </ul>
 {% else %}
-    <p>Ovaj tim nema utakmica.</p>
+    <p>This team currently has no matches.</p>
 {% endif %}
 
-<a href="{% url 'main:teams' %}">← Povratak na timove</a>
+<a href="{% url 'main:teams' %}">← Back to Teams</a>
 
 {% endblock %}
