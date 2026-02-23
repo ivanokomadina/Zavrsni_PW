@@ -1,8 +1,8 @@
-/* ---------- Global ---------- */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
     background-color: #f4f6f9;
     color: #333;
 }
@@ -27,7 +27,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ---------- Auth info ---------- */
+
 .auth-bar {
     padding: 10px 30px;       
     background-color: #ffffff;
@@ -66,12 +66,13 @@ button:hover {
     background-color: #162d66;
 }
 
-/* ---------- Layout ---------- */
+
 #sidebar {
     width: 100%;
     background-color: #ffffff;
     padding: 15px 30px;
     border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
 }
 
 #sidebar ul {
@@ -91,7 +92,7 @@ button:hover {
     font-weight: bold;
 }
 
-/* ---------- Content ---------- */
+
 .content {
     margin: 0 auto;
     padding: 30px;
@@ -103,7 +104,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
-/* ---------- Cards ---------- */
+
 .league,
 .team,
 .match,
@@ -122,7 +123,7 @@ button:hover {
     background-color: #f0f4ff;
 }
 
-/* ---------- Lists ---------- */
+
 ul {
     padding-left: 20px;
 }
@@ -131,7 +132,7 @@ li {
     margin-bottom: 10px;
 }
 
-/* ---------- Forms ---------- */
+
 form input[type="text"],
 form input[type="password"],
 form input[type="number"],
@@ -145,7 +146,7 @@ form {
     margin-bottom: 20px;
 }
 
-/* ---------- Login / Register Forms ---------- */
+
 .form-container {
     max-width: 450px;
     margin: 30px auto;
@@ -195,14 +196,14 @@ form.register-form button:hover {
     background-color: #162d66;
 }
 
-/* ---------- Links at bottom ---------- */
+
 a[href*="Back"],
 a[href*="Povratak"] {
     display: inline-block;
     margin-top: 15px;
 }
 
-/* ---------- Small screens ---------- */
+
 @media (max-width: 768px) {
     #sidebar {
         width: 100%;
